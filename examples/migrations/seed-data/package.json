@@ -1,0 +1,22 @@
+{
+  "name": "@database-craft/seed-data",
+  "version": "1.0.0",
+  "description": "Development seeds with faker, test fixtures with factory pattern, and idempotent production seeds",
+  "private": true,
+  "scripts": {
+    "seed": "ts-node seed.ts",
+    "seed:prod": "NODE_ENV=production ts-node seed.ts",
+    "reset": "ts-node reset.ts",
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev --name init"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@faker-js/faker": "^9.2.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.22.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

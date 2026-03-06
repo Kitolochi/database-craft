@@ -1,0 +1,81 @@
+// Prisma CRUD Example — User + Post with relations
+// Run: npx prisma migrate dev --name init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String
+  bio       String?
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  posts    Post[]
+  comments Comment[]
+
+  @@map("users")
+}
+
+model Post {
+  id          Int        @id @default(autoincrement())
+  title       String
+  content     String
+  published   Boolean    @default(false)
+  viewCount   Int        @default(0) @map("view_count")
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
+
+  author   User @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId Int  @map("author_id")
+
+  comments Comment[]
+  tags     TagsOnPosts[]
+
+  @@index([authorId])
+  @@index([published, createdAt])
+  @@map("posts")
+}
+
+model Comment {
+  id        Int      @id @default(autoincrement())
+  body      String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  post   Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId Int  @map("post_id")
+
+  author   User @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  authorId Int  @map("author_id")
+
+  @@index([postId])
+  @@index([authorId])
+  @@map("comments")
+}
+
+model Tag {
+  id    Int    @id @default(autoincrement())
+  name  String @unique
+  posts TagsOnPosts[]
+
+  @@map("tags")
+}
+
+model TagsOnPosts {
+  post   Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+  postId Int  @map("post_id")
+
+  tag   Tag @relation(fields: [tagId], references: [id], onDelete: Cascade)
+  tagId Int @map("tag_id")
+
+  @@id([postId, tagId])
+  @@map("tags_on_posts")
+}

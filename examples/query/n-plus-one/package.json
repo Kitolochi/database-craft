@@ -1,0 +1,23 @@
+{
+  "name": "@database-craft/n-plus-one",
+  "version": "1.0.0",
+  "description": "N+1 query problem demonstration and solutions — Prisma include, DataLoader, Drizzle joins",
+  "private": true,
+  "scripts": {
+    "problem": "ts-node problem.ts",
+    "solutions": "ts-node solutions.ts",
+    "dataloader": "ts-node dataloader.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "dataloader": "^2.2.3",
+    "drizzle-orm": "^0.36.0",
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "prisma": "^5.22.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "@types/node": "^22.0.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@database-craft/connection-pooling",
+  "version": "1.0.0",
+  "description": "PgBouncer configuration and Node.js pg.Pool setup — pool sizing, health checks, connection lifetime",
+  "private": true,
+  "scripts": {
+    "demo": "ts-node pool.config.ts"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

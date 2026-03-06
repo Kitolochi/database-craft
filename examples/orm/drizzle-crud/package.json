@@ -1,0 +1,21 @@
+{
+  "name": "@database-craft/drizzle-crud",
+  "version": "1.0.0",
+  "description": "Drizzle ORM schema-in-code with SQL-like queries, joins, and type-safe operations",
+  "private": true,
+  "scripts": {
+    "generate": "drizzle-kit generate",
+    "migrate": "ts-node migrate.ts",
+    "demo": "ts-node operations.ts",
+    "studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.36.0",
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.28.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
