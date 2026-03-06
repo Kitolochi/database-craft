@@ -9,10 +9,10 @@ Status: [x] = built, [ ] = available to build
 
 ## Category 1: ORM Patterns
 
-- [ ] **Prisma CRUD** — Model definition, create/read/update/delete, relations, transactions. Prisma + Postgres.
+- [x] **Prisma CRUD** — Model definition, create/read/update/delete, relations, transactions. Prisma + Postgres. (built: examples/orm/prisma-crud/)
 - [ ] **Prisma Relations** — One-to-many, many-to-many, self-referential. Eager loading with `include`.
 - [ ] **Prisma Raw Queries** — `$queryRaw` and `$executeRaw` for complex SQL. Tagged template safety.
-- [ ] **Drizzle CRUD** — Schema-in-code, SQL-like queries, insert/select/update/delete. Drizzle + Postgres.
+- [x] **Drizzle CRUD** — Schema-in-code, SQL-like queries, insert/select/update/delete. Drizzle + Postgres. (built: examples/orm/drizzle-crud/)
 - [ ] **Drizzle Relations** — Relational queries API, nested selects, joins.
 - [ ] **Drizzle + Turso** — Drizzle with libSQL driver for edge-distributed SQLite.
 - [ ] **Kysely Queries** — Type-safe query builder with raw SQL feel. Select, join, subquery, CTE.
@@ -23,7 +23,7 @@ Status: [x] = built, [ ] = available to build
 ## Category 2: Schema Design
 
 - [ ] **Normalization** — 1NF through 3NF with practical examples. When to denormalize.
-- [ ] **Soft Deletes** — `deletedAt` timestamp pattern. Query scoping, restoration, permanent purge.
+- [x] **Soft Deletes** — `deletedAt` timestamp pattern. Query scoping, restoration, permanent purge. (built: examples/schema/soft-deletes/)
 - [ ] **Audit Trail** — `createdAt`, `updatedAt`, `createdBy` fields. History table pattern for full change log.
 - [ ] **Multi-Tenancy (Row-Level)** — Tenant ID column, row-level security (RLS), query scoping middleware.
 - [ ] **Multi-Tenancy (Schema-Level)** — Separate schemas per tenant. Postgres `search_path` switching.
@@ -40,15 +40,15 @@ Status: [x] = built, [ ] = available to build
 - [ ] **Zero-Downtime Migrations** — Column add → backfill → code deploy → drop old column. No locks.
 - [ ] **Prisma Migrations** — `prisma migrate dev`, `prisma migrate deploy`, drift detection.
 - [ ] **Drizzle Migrations** — `drizzle-kit generate`, `drizzle-kit push`, custom migration scripts.
-- [ ] **Seed Data** — Development seeds, test fixtures, idempotent production seeds.
+- [x] **Seed Data** — Development seeds, test fixtures, idempotent production seeds. (built: examples/migrations/seed-data/)
 - [ ] **Data Backfill** — Batch processing for large table updates. Progress tracking, resumability.
 - [ ] **Schema Versioning** — Tracking schema version in app. Compatibility checks at startup.
 
 ## Category 4: Query Optimization
 
 - [ ] **Indexing Strategies** — B-tree, GIN, GiST, partial, composite. When each type applies.
-- [ ] **N+1 Prevention** — DataLoader pattern, eager loading, ORM `include`/`with`. Before/after comparison.
-- [ ] **Connection Pooling** — PgBouncer setup (72% transaction time reduction). Node `pg.Pool` config.
+- [x] **N+1 Prevention** — DataLoader pattern, eager loading, ORM `include`/`with`. Before/after comparison. (built: examples/query/n-plus-one/)
+- [x] **Connection Pooling** — PgBouncer setup (72% transaction time reduction). Node `pg.Pool` config. (built: examples/query/connection-pooling/)
 - [ ] **EXPLAIN Analysis** — Reading `EXPLAIN ANALYZE` output. Identifying seq scans, hash joins, sort costs.
 - [ ] **Pagination** — Offset vs cursor-based. Keyset pagination for large datasets. Prisma/Drizzle examples.
 - [ ] **Batch Operations** — Bulk insert, upsert, `createMany`. Transaction batching for consistency.
@@ -58,7 +58,7 @@ Status: [x] = built, [ ] = available to build
 
 ## Category 5: Caching
 
-- [ ] **Redis Cache-Aside** — Lazy loading pattern with TTL. Invalidation on write. ioredis + Prisma.
+- [x] **Redis Cache-Aside** — Lazy loading pattern with TTL. Invalidation on write. ioredis + Prisma. (built: examples/cache/redis-cache-aside/)
 - [ ] **Write-Through Cache** — Synchronous cache update on every write. Strong consistency.
 - [ ] **Cache Invalidation** — TTL, event-driven, tag-based strategies. Pattern selection guide.
 - [ ] **Session Store** — Redis-backed sessions with express-session. TTL, sliding expiration.
@@ -69,7 +69,7 @@ Status: [x] = built, [ ] = available to build
 
 ## Category 6: Search
 
-- [ ] **Postgres FTS Setup** — tsvector column, GIN index, `to_tsvector`/`plainto_tsquery`. Ranking.
+- [x] **Postgres FTS Setup** — tsvector column, GIN index, `to_tsvector`/`plainto_tsquery`. Ranking. (built: examples/search/postgres-fts/)
 - [ ] **Postgres FTS Advanced** — Weighted search (title > body), phrase matching, language config.
 - [ ] **Meilisearch Integration** — Index sync from Postgres, search API, facets, filters, typo tolerance.
 - [ ] **Typesense Integration** — Schema definition, indexing, search with vector support.
