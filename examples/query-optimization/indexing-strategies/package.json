@@ -1,0 +1,13 @@
+{
+  "name": "@database-craft/indexing-strategies",
+  "version": "1.0.0",
+  "description": "Postgres indexing strategies — B-tree, GIN, GiST, partial, composite indexes with EXPLAIN ANALYZE examples",
+  "private": true,
+  "scripts": {
+    "demo": "tsx src/indexes.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}
