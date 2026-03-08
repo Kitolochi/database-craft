@@ -1,0 +1,14 @@
+{
+  "name": "@database-craft/pgvector-rag",
+  "version": "1.0.0",
+  "description": "In-memory vector search — embeddings, HNSW concept, hybrid retrieval, RAG pipeline (no external deps)",
+  "private": true,
+  "scripts": {
+    "demo": "tsx vector-search.ts",
+    "rag": "tsx rag-pipeline.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}
