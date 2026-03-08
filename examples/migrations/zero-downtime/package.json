@@ -1,0 +1,13 @@
+{
+  "name": "@database-craft/zero-downtime",
+  "version": "1.0.0",
+  "description": "Zero-downtime migrations using the expand-contract pattern — rename columns and split tables without locks or downtime",
+  "private": true,
+  "scripts": {
+    "demo": "tsx src/zero-downtime.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}
