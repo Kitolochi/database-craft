@@ -1,0 +1,13 @@
+{
+  "name": "@database-craft/multi-tenancy-row",
+  "version": "1.0.0",
+  "description": "Row-level multi-tenancy — tenant ID column, request middleware, automatic query scoping, RLS policies",
+  "private": true,
+  "scripts": {
+    "demo": "tsx src/multi-tenant.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}
