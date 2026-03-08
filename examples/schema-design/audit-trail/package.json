@@ -1,0 +1,13 @@
+{
+  "name": "@database-craft/audit-trail",
+  "version": "1.0.0",
+  "description": "Audit trail pattern — createdAt/updatedAt/createdBy/updatedBy auto-population, entity history table, version diffs",
+  "private": true,
+  "scripts": {
+    "demo": "tsx src/audit-trail.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}
