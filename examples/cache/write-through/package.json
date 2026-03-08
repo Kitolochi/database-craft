@@ -1,0 +1,13 @@
+{
+  "name": "@database-craft/write-through",
+  "version": "1.0.0",
+  "description": "Write-through cache pattern — synchronous cache updates on writes, TTL eviction, stampede prevention with locking",
+  "private": true,
+  "scripts": {
+    "demo": "tsx src/write-through.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}
