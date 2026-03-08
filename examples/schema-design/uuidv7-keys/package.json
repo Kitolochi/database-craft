@@ -1,0 +1,14 @@
+{
+  "name": "@database-craft/uuidv7-keys",
+  "version": "1.0.0",
+  "description": "UUIDv7 primary keys — generation, comparison with UUIDv4/CUID2, and B-tree indexing benefits",
+  "private": true,
+  "scripts": {
+    "demo": "tsx uuidv7-keys.ts",
+    "benchmark": "tsx benchmark.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}
